@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <title> גמילות חסדים </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://d3js.org/topojson.v0.min.js"></script>
+    <link rel="stylesheet" href="https://npmcdn.com/leaflet@1.0.0-rc.2/dist/leaflet.css" />
+    <script src="https://npmcdn.com/leaflet@1.0.0-rc.2/dist/leaflet.js"></script>
+    <script type="text/javascript" src="angular.js"></script>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="angular-route.min.js"></script>
+    <script type="text/javascript" src="home.js"></script>
+    <script type="text/javascript" src="branches.js"></script>
+    
+</head>
+
+<body ng-app="myApp" ng-controller="homeCtrl">
+    <center><img src="http://up353.siz.co.il/up2/mgvvjtzzmy2z.png">
+    </center>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="#/home" ng-click="home(true)">דף הבית</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#/branches" ng-click="home(false)">סניפים</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#/stories" ng-click="home(false)">הסיפורים שלנו</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#/gifts" ng-click="home(false)">לתרומות</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#/contact" ng-click="home(false)">צור קשר</a>
+        </li>
+    </ul>
+
+    <div ng-show="showHome">
+        <div class="jumbotron">
+            <h1 class="display-4">גמילות חסדים</h1>
+            <p class="lead"></p>
+            <hr class="my-4">
+            <p>עמותת "גמילות חסדים" נרתמת לפתור מצוקה גדולה בקרב החברה הישראלית ומנסה לפתור את בעיית העוני ופערי המעמדות. </p>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="#" role="button">עוד עלינו...</a>
+            </p>
+        </div>
+    </div>
+
+    <div ng-view></div>
+
+</body>
+
+</html>
