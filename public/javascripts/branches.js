@@ -17,19 +17,19 @@ app.controller('branches', function ($scope) {
                 "xCoord": 32.31615,
                 "yCoord": 34.87061,
                 "name": "החלוץ 110",
-                "pic": "a.jpg"
+                "pic": "/images/a.jpg"
             },
             {
                 "xCoord": 32.7942,
                 "yCoord": 35.02991,
                 "name": "בר אילן 5",
-                "pic": "b.jpg"
+                "pic": "/images/b.jpg"
             },
             {
                 "xCoord": 30.58354,
                 "yCoord": 34.791461999991000,
                 "name": "ההסתדרות 68",
-                "pic": "c.jpg"
+                "pic": "/images/c.jpg"
             }];
 
         for (var index in branch) {
