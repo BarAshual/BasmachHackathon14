@@ -24,11 +24,10 @@ public class Application extends Controller {
 
 	public static Result getData(){
 		JSONParser parser = new JSONParser();
-		JSONObject jsonObject = null;
+		Object obj = null;
 		try
 		{
-			Object obj = parser.parse(new FileReader("././public/javascripts/db.json"));
-			 jsonObject = (JSONObject) obj;
+			obj = parser.parse(new FileReader("././public/javascripts/db.json"));
 			
 		}
 		
@@ -36,6 +35,6 @@ public class Application extends Controller {
 			e.printStackTrace();
 		}
 		
-		return ok(Json.toJson(jsonObject));
+		return ok(Json.toJson(obj));
 	}
 }
