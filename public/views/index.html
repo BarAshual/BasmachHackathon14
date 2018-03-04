@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    
+    <!----------------------------------------------------------JS-------------------------------------------------------------->
+<!--
+    <script type="text/javascript" src="/javascripts/angular.js"></script>
+    <script type="text/javascript" src="/javascripts/angular-route.js"></script>
+-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <script type="text/javascript" src="/javascripts/index.js"></script>
+    <script type="text/javascript" src="/javascripts/home.js"></script>
+    <script type="text/javascript" src="/javascripts/branches.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://d3js.org/d3.v3!min.js"></script>
+    <script src="https://d3js.org/topojson.v0.min.js"></script>
+    <script src="https://npmcdn.com/leaflet@1.0.0-rc.2/dist/leaflet.js"></script>
+    
+    <!----------------------------------------------------------CSS-------------------------------------------------------------->
+    <link rel="stylesheet" href="https://npmcdn.com/leaflet@1.0.0-rc.2/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <title> גמילות חסדים </title>
+</head>
+
+<body ng-app="app">
+    <center>
+        <a href="#/home">
+            <img src="http://up353.siz.co.il/up2/mgvvjtzzmy2z.png">
+        </a>
+    </center>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="#!home">דף הבית</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#!branches">סניפים</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#!stories">הסיפורים שלנו</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#!gifts">לתרומות</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#!contact">צור קשר</a>
+        </li>
+    </ul>
+    
+    <div ng-view></div>
+
+</body>
+
+</html>
