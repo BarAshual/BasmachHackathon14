@@ -1,128 +1,225 @@
-angular.module('calendarDemoApp', ['ui.calendar', 'ui.bootstrap']);
-
-function CalendarCtrl($scope,$compile,uiCalendarConfig) {
-    var date = new Date();
-    var d = date.getDate();
-    var m = date.getMonth();
-    var y = date.getFullYear();
+app.controller('luzCtrl', function($scope) {
+    $scope.DizingofCurrCount1 = 0;
+    $scope.DizingofCurrCount2 = 0;
+     $scope.DizingofCurrCount3 = 0;
+     $scope.DizingofCurrCount4 = 0;
+     $scope.DizingofCurrCount5 = 0;
     
-    $scope.changeTo = 'Hungarian';
-    /* event source that pulls from google.com */
-    $scope.eventSource = {
-            url: "http://www.google.com/calendar/feeds/usa__en%40holiday.calendar.google.com/public/basic",
-            className: 'gcal-event',           // an option!
-            currentTimezone: 'America/Chicago' // an option!
+    
+    $scope.EvenCurrCount1 = 0;
+     $scope.EvenCurrCount2 = 0;
+     $scope.EvenCurrCount3 = 0;
+     $scope.EvenCurrCount4 = 0;
+     $scope.EvenCurrCount5 = 0;
+    
+    
+    $scope.CharCurrCount1 = 0;
+     $scope.CharCurrCount2 = 0;
+     $scope.CharCurrCount3 = 0;
+     $scope.CharCurrCount4 = 0;
+     $scope.CharCurrCount5 = 0;
+    
+    
+    $scope.KikarCurrCount1 = 0;
+     $scope.KikarCurrCount2 = 0;
+     $scope.KikarCurrCount3 = 0;
+     $scope.KikarCurrCount4 = 0;
+     $scope.KikarCurrCount5 = 0;
+    
+    
+    $scope.UCurrCount1 = 0;
+    $scope.UCurrCount2 = 0;
+    $scope.UCurrCount3 = 0;
+    $scope.UCurrCount4 = 0;
+    $scope.UCurrCount5 = 0;
+    
+    $scope.DizingofMax = 30;
+    $scope.EvenMax = 20;
+    $scope.CharMax = 20;
+    $scope.KikarMax = 25;
+    $scope.UMax = 30;
+    
+    $scope.addDizingof = function(DizingofCurrCount){
+        if(DizingofCurrCount + 1 < $scope.DizingofMax){
+            
+            
+            switch(DizingofCurrCount) {
+                case $scope.DizingofCurrCount1:
+                    $scope.DizingofCurrCount1++;
+                    alert("Success!!"); 
+                    break;
+                    
+                case $scope.DizingofCurrCount2:
+                    $scope.DizingofCurrCount2++;
+                   alert("Success!!"); 
+                    break;
+                    
+                case $scope.DizingofCurrCount3:
+                    $scope.DizingofCurrCount3++;
+                   alert("Success!!"); 
+                    break;
+                    
+                    case $scope.DizingofCurrCount4:
+                    $scope.DizingofCurrCount4++;
+                   alert("Success!!"); 
+                    break;
+                    
+                    case $scope.DizingofCurrCount5:
+                    $scope.DizingofCurrCount5++;
+                   alert("Success!!"); 
+                    break;
+            }
+            
+            
+           
+              
+        } 
+        else 
+            {
+                alert("error");
+            }
     };
-    /* event source that contains custom events on the scope */
-    $scope.events = [
-      {title: 'All Day Event',start: new Date(y, m, 1)},
-      {title: 'Long Event',start: new Date(y, m, d - 5),end: new Date(y, m, d - 2)},
-      {id: 999,title: 'Repeating Event',start: new Date(y, m, d - 3, 16, 0),allDay: false},
-      {id: 999,title: 'Repeating Event',start: new Date(y, m, d + 4, 16, 0),allDay: false},
-      {title: 'Birthday Party',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false},
-      {title: 'Click for Google',start: new Date(y, m, 28),end: new Date(y, m, 29),url: 'http://google.com/'}
-    ];
-    /* event source that calls a function on every view switch */
-    $scope.eventsF = function (start, end, timezone, callback) {
-      var s = new Date(start).getTime() / 1000;
-      var e = new Date(end).getTime() / 1000;
-      var m = new Date(start).getMonth();
-      var events = [{title: 'Feed Me ' + m,start: s + (50000),end: s + (100000),allDay: false, className: ['customFeed']}];
-      callback(events);
+    
+     $scope.addChar = function(CharCurrCount){
+        if(CharCurrCount + 1< $scope.CharMax){
+              
+            switch(CharCurrCount) {
+                case $scope.CharCurrCount1:
+                    $scope.CharCurrCount1++;
+                    alert("Success!!"); 
+                    break;
+                    
+                case $scope.CharCurrCount2:
+                    $scope.CharCurrCount2++;
+                   alert("Success!!"); 
+                    break;
+                    
+                case $scope.CharCurrCount3:
+                    $scope.CharCurrCount3++;
+                   alert("Success!!"); 
+                    break;
+                    
+                    case $scope.CharCurrCount4:
+                    $scope.CharCurrCount4++;
+                   alert("Success!!"); 
+                    break;
+                    
+                    case $scope.CharCurrCount5:
+                    $scope.CharCurrCount5++;
+                   alert("Success!!"); 
+                    break;
+            }
+        } 
+        else 
+            {
+                alert("error");
+            }
     };
-
-    $scope.calEventsExt = {
-       color: '#f00',
-       textColor: 'yellow',
-       events: [ 
-          {type:'party',title: 'Lunch',start: new Date(y, m, d, 12, 0),end: new Date(y, m, d, 14, 0),allDay: false},
-          {type:'party',title: 'Lunch 2',start: new Date(y, m, d, 12, 0),end: new Date(y, m, d, 14, 0),allDay: false},
-          {type:'party',title: 'Click for Google',start: new Date(y, m, 28),end: new Date(y, m, 29),url: 'http://google.com/'}
-        ]
+    
+     $scope.addEven = function(EvenCurrCount){
+        if(EvenCurrCount + 1 < $scope.CharMax){
+               
+            switch(EvenCurrCount) {
+                case $scope.EvenCurrCount1:
+                    $scope.EvenCurrCount1++;
+                    alert("Success!!"); 
+                    break;
+                    
+                case $scope.EvenCurrCount2:
+                    $scope.EvenCurrCount2++;
+                   alert("Success!!"); 
+                    break;
+                    
+                case $scope.EvenCurrCount3:
+                    $scope.EvenCurrCount3++;
+                   alert("Success!!"); 
+                    break;
+                    
+                    case $scope.EvenCurrCount4:
+                    $scope.EvenCurrCount4++;
+                   alert("Success!!"); 
+                    break;
+                    
+                    case $scope.EvenCurrCount5:
+                    $scope.EvenCurrCount5++;
+                   alert("Success!!"); 
+                    break;
+            }
+        } 
+        else 
+            {
+                alert("error");
+            }
     };
-    /* alert on eventClick */
-    $scope.alertOnEventClick = function( date, jsEvent, view){
-        $scope.alertMessage = (date.title + ' was clicked ');
+     $scope.addKikar = function(addKikar){
+        if(addKikar + 1 < $scope.KikarMax){
+           
+            switch(addKikar) {
+                case $scope.KikarCurrCount1:
+                    $scope.KikarCurrCount1++;
+                    alert("Success!!"); 
+                    break;
+                    
+                case $scope.KikarCurrCount2:
+                    $scope.KikarCurrCount2++;
+                   alert("Success!!"); 
+                    break;
+                    
+                case $scope.KikarCurrCount3:
+                    $scope.KikarCurrCount3++;
+                   alert("Success!!"); 
+                    break;
+                    
+                    case $scope.KikarCurrCount4:
+                    $scope.KikarCurrCount4++;
+                   alert("Success!!"); 
+                    break;
+                    
+                    case $scope.KikarCurrCount5:
+                    $scope.KikarCurrCount5++;
+                   alert("Success!!"); 
+                    break;
+            }
+        } 
+        else 
+            {
+                alert("error");
+            }
     };
-    /* alert on Drop */
-     $scope.alertOnDrop = function(event, delta, revertFunc, jsEvent, ui, view){
-       $scope.alertMessage = ('Event Droped to make dayDelta ' + delta);
+    
+     $scope.addU = function(addU){
+        if(addU + 1 < $scope.UMax){
+            
+            switch(addU) {
+                case $scope.UCurrCount1:
+                    $scope.UCurrCount1++;
+                    alert("Success!!"); 
+                    break;
+                    
+                case $scope.UCurrCount2:
+                    $scope.UCurrCount2++;
+                   alert("Success!!"); 
+                    break;
+                    
+                case $scope.UCurrCount3:
+                    $scope.UCurrCount3++;
+                   alert("Success!!"); 
+                    break;
+                    
+                    case $scope.UCurrCount4:
+                    $scope.UCurrCount4++;
+                   alert("Success!!"); 
+                    break;
+                    
+                    case $scope.UCurrCount5:
+                    $scope.UCurrCount5++;
+                   alert("Success!!"); 
+                    break;
+            }
+        } 
+        else 
+            {
+                alert("error");
+            }
     };
-    /* alert on Resize */
-    $scope.alertOnResize = function(event, delta, revertFunc, jsEvent, ui, view ){
-       $scope.alertMessage = ('Event Resized to make dayDelta ' + delta);
-    };
-    /* add and removes an event source of choice */
-    $scope.addRemoveEventSource = function(sources,source) {
-      var canAdd = 0;
-      angular.forEach(sources,function(value, key){
-        if(sources[key] === source){
-          sources.splice(key,1);
-          canAdd = 1;
-        }
-      });
-      if(canAdd === 0){
-        sources.push(source);
-      }
-    };
-    /* add custom event*/
-    $scope.addEvent = function() {
-      $scope.events.push({
-        title: 'Open Sesame',
-        start: new Date(y, m, 28),
-        end: new Date(y, m, 29),
-        className: ['openSesame']
-      });
-    };
-    /* remove event */
-    $scope.remove = function(index) {
-      $scope.events.splice(index,1);
-    };
-    /* Change View */
-    $scope.changeView = function(view,calendar) {
-      uiCalendarConfig.calendars[calendar].fullCalendar('changeView',view);
-    };
-    /* Change View */
-    $scope.renderCalender = function(calendar) {
-      if(uiCalendarConfig.calendars[calendar]){
-        uiCalendarConfig.calendars[calendar].fullCalendar('render');
-      }
-    };
-     /* Render Tooltip */
-    $scope.eventRender = function( event, element, view ) { 
-        element.attr({'tooltip': event.title,
-                     'tooltip-append-to-body': true});
-        $compile(element)($scope);
-    };
-    /* config object */
-    $scope.uiConfig = {
-      calendar:{
-        height: 450,
-        editable: true,
-        header:{
-          left: 'title',
-          center: '',
-          right: 'today prev,next'
-        },
-        eventClick: $scope.alertOnEventClick,
-        eventDrop: $scope.alertOnDrop,
-        eventResize: $scope.alertOnResize,
-        eventRender: $scope.eventRender
-      }
-    };
-
-    $scope.changeLang = function() {
-      if($scope.changeTo === 'Hungarian'){
-        $scope.uiConfig.calendar.dayNames = ["Vasárnap", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat"];
-        $scope.uiConfig.calendar.dayNamesShort = ["Vas", "Hét", "Kedd", "Sze", "Csüt", "Pén", "Szo"];
-        $scope.changeTo= 'English';
-      } else {
-        $scope.uiConfig.calendar.dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        $scope.uiConfig.calendar.dayNamesShort = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-        $scope.changeTo = 'Hungarian';
-      }
-    };
-    /* event sources array*/
-    $scope.eventSources = [$scope.events, $scope.eventSource, $scope.eventsF];
-    $scope.eventSources2 = [$scope.calEventsExt, $scope.eventsF, $scope.events];
-}
+});
