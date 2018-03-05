@@ -19,6 +19,10 @@ app.config(function ($routeProvider) {
         .when("/gifts", {
             templateUrl: "/views/gifts.html"
         })
+        .when("/luz", {
+            templateUrl: "/views/luz.html",
+            controller: "luzCtrl"
+        })
         .otherwise({
             redirect: "/home"
         });

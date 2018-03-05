@@ -11,3 +11,5 @@ GET		/stylesheets/*file			controllers.Assets.at(path="/public/stylesheets", file
 GET		/views/*file				controllers.Assets.at(path="/public/views", file)
 GET		/images/*file				controllers.Assets.at(path="/public/images", file)
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+GET     /branches					controllers.Application.getData()
