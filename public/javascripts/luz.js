@@ -41,8 +41,7 @@ app.controller('luzCtrl', function($scope) {
     
     $scope.addDizingof = function(DizingofCurrCount){
         if(DizingofCurrCount + 1 < $scope.DizingofMax){
-            
-            
+        
             switch(DizingofCurrCount) {
                 case $scope.DizingofCurrCount1:
                     $scope.DizingofCurrCount1++;

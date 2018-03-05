@@ -23,7 +23,12 @@ app.controller('branches', function ($scope, $http) {
 
                 for (var index in branch) {
                     var marker = L.marker([branch[index].xCoord, branch[index].yCoord]).addTo(mymap);
-                    marker.bindPopup("<b>" + branch[index].name + "</b><br> כתובת:" + branch[index].address + "<br>טל:" + branch[index].tel + "<br><img style=\"height: 65px\" style=\"height: 65px\" src='/images/" + branch[index].img + "'>");
+                    var details = "<b>" + branch[index].name + "</b>"
+                                + "<br> כתובת:" + branch[index].address 
+                                + "<br>טל:" + branch[index].tel + "<br>"
+                                +"<a href='#!luz'>לעמוד העמותה</a>" + "<br>"
+                                +"<img style=\"height: 65px\" style=\"height: 65px\" src='/images/" + branch[index].img + "'>";
+                    marker.bindPopup(details);
                 }
 
                 $scope.findClosed = function () {
