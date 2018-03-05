@@ -39,186 +39,268 @@ app.controller('luzCtrl', function($scope) {
     $scope.KikarMax = 25;
     $scope.UMax = 30;
     
-    $scope.addDizingof = function(DizingofCurrCount){
-        if(DizingofCurrCount + 1 < $scope.DizingofMax){
+    $scope.addDizingof = function(DizingofCurrCountIndex){
         
-            switch(DizingofCurrCount) {
-                case $scope.DizingofCurrCount1:
+            switch(DizingofCurrCountIndex) {
+                case 1:
+                    if($scope.DizingofCurrCount1 < $scope.DizingofMax){
                     $scope.DizingofCurrCount1++;
-                    alert("Success!!"); 
+                    alertify.success("Success!!");
+                    } else {
+                      alertify.error("error!!");  
+                    }
                     break;
                     
-                case $scope.DizingofCurrCount2:
+                case 2:
+                     if($scope.DizingofCurrCount2 < $scope.DizingofMax){
                     $scope.DizingofCurrCount2++;
-                   alert("Success!!"); 
+                    alertify.success("Success!!");
+                    } else {
+                      alertify.error("error!!");  
+                    }
                     break;
                     
-                case $scope.DizingofCurrCount3:
+                case 3:
+                     if($scope.DizingofCurrCount3 < $scope.DizingofMax){
                     $scope.DizingofCurrCount3++;
-                   alert("Success!!"); 
+                    alertify.success("Success!!");
+                    } else {
+                      alertify.error("error!!");  
+                    }
                     break;
                     
-                    case $scope.DizingofCurrCount4:
+                    case 4:
+                    if($scope.DizingofCurrCount4 < $scope.DizingofMax){
                     $scope.DizingofCurrCount4++;
-                   alert("Success!!"); 
+                  alertify.success("Success!!");
+                    } else {
+                      alertify.error("error!!");  
+                    }
                     break;
                     
-                    case $scope.DizingofCurrCount5:
+                    case 5:
+                     if($scope.DizingofCurrCount5 < $scope.DizingofMax){
                     $scope.DizingofCurrCount5++;
-                   alert("Success!!"); 
+                    alertify.success("Success!!");
+                    } else {
+                      alertify.error("error!!");  
+                    }
                     break;
-            }
-            
-            
-           
-              
-        } 
-        else 
-            {
-                alert("error");
             }
     };
     
-     $scope.addChar = function(CharCurrCount){
-        if(CharCurrCount + 1< $scope.CharMax){
-              
-            switch(CharCurrCount) {
-                case $scope.CharCurrCount1:
-                    $scope.CharCurrCount1++;
-                    alert("Success!!"); 
+     $scope.addChar = function(CharCurrCountIndex){
+            switch(CharCurrCountIndex) {
+                case 1:
+                    if($scope.CharCurrCount1 < $scope.CharMax){
+                        $scope.CharCurrCount1++;
+                    alertify.success("Success!!");
+                    } else {
+                      alertify.error("error!!");  
+                    }
+                    
                     break;
                     
-                case $scope.CharCurrCount2:
-                    $scope.CharCurrCount2++;
-                   alert("Success!!"); 
+                case 2:
+                    if($scope.CharCurrCount2 < $scope.CharMax){
+                        $scope.CharCurrCount2++;
+                   alertify.success("Success!!");
+                    } else {
+                      alertify.error("error!!");  
+                    }
+                    
                     break;
                     
-                case $scope.CharCurrCount3:
-                    $scope.CharCurrCount3++;
-                   alert("Success!!"); 
+                case 3:
+                    if($scope.CharCurrCount3 < $scope.CharMax){
+                        $scope.CharCurrCount3++;
+                   alertify.success("Success!!");
+                    } else {
+                      alertify.error("error!!");  
+                    }
+                    
                     break;
                     
-                    case $scope.CharCurrCount4:
-                    $scope.CharCurrCount4++;
-                   alert("Success!!"); 
+                    case 4:
+                    if($scope.CharCurrCount4 < $scope.CharMax){
+                        $scope.CharCurrCount4++;
+                   alertify.success("Success!!");
+                    } else {
+                      alertify.error("error!!");  
+                    }
+                    
                     break;
                     
-                    case $scope.CharCurrCount5:
-                    $scope.CharCurrCount5++;
-                   alert("Success!!"); 
-                    break;
-            }
-        } 
-        else 
-            {
-                alert("error");
-            }
-    };
-    
-     $scope.addEven = function(EvenCurrCount){
-        if(EvenCurrCount + 1 < $scope.CharMax){
-               
-            switch(EvenCurrCount) {
-                case $scope.EvenCurrCount1:
-                    $scope.EvenCurrCount1++;
-                    alert("Success!!"); 
-                    break;
+                    case 5:
+                    if($scope.CharCurrCount5 < $scope.CharMax){
+                        $scope.CharCurrCount5++;
+                    alertify.success("Success!!");
+                    } else {
+                      alertify.error("error!!");  
+                    }
                     
-                case $scope.EvenCurrCount2:
-                    $scope.EvenCurrCount2++;
-                   alert("Success!!"); 
                     break;
-                    
-                case $scope.EvenCurrCount3:
-                    $scope.EvenCurrCount3++;
-                   alert("Success!!"); 
-                    break;
-                    
-                    case $scope.EvenCurrCount4:
-                    $scope.EvenCurrCount4++;
-                   alert("Success!!"); 
-                    break;
-                    
-                    case $scope.EvenCurrCount5:
-                    $scope.EvenCurrCount5++;
-                   alert("Success!!"); 
-                    break;
-            }
-        } 
-        else 
-            {
-                alert("error");
-            }
-    };
-     $scope.addKikar = function(addKikar){
-        if(addKikar + 1 < $scope.KikarMax){
-           
-            switch(addKikar) {
-                case $scope.KikarCurrCount1:
-                    $scope.KikarCurrCount1++;
-                    alert("Success!!"); 
-                    break;
-                    
-                case $scope.KikarCurrCount2:
-                    $scope.KikarCurrCount2++;
-                   alert("Success!!"); 
-                    break;
-                    
-                case $scope.KikarCurrCount3:
-                    $scope.KikarCurrCount3++;
-                   alert("Success!!"); 
-                    break;
-                    
-                    case $scope.KikarCurrCount4:
-                    $scope.KikarCurrCount4++;
-                   alert("Success!!"); 
-                    break;
-                    
-                    case $scope.KikarCurrCount5:
-                    $scope.KikarCurrCount5++;
-                   alert("Success!!"); 
-                    break;
-            }
-        } 
-        else 
-            {
-                alert("error");
             }
     };
     
-     $scope.addU = function(addU){
-        if(addU + 1 < $scope.UMax){
-            
-            switch(addU) {
-                case $scope.UCurrCount1:
-                    $scope.UCurrCount1++;
-                    alert("Success!!"); 
+     $scope.addEven = function(EvenCurrCountIndex){
+            switch(EvenCurrCountIndex) {
+                case 1:
+                     if($scope.EvenCurrCount1 < $scope.EvenMax){
+                        $scope.EvenCurrCount1++;
+                   alertify.success("Success!!");
+                    } else {
+                      alertify.error("error!!");  
+                    }
+                    
                     break;
                     
-                case $scope.UCurrCount2:
-                    $scope.UCurrCount2++;
-                   alert("Success!!"); 
+                case 2:
+                      if($scope.EvenCurrCount2 < $scope.EvenMax){
+                        $scope.EvenCurrCount2++;
+                   alertify.success("Success!!");
+                    } else {
+                      alertify.error("error!!");  
+                    }
+                    
                     break;
                     
-                case $scope.UCurrCount3:
-                    $scope.UCurrCount3++;
-                   alert("Success!!"); 
+                case 3:
+                      if($scope.EvenCurrCount3 < $scope.EvenMax){
+                        $scope.EvenCurrCount3++;
+                  alertify.success("Success!!");
+                    } else {
+                      alertify.error("error!!");  
+                    }
+                    
                     break;
                     
-                    case $scope.UCurrCount4:
-                    $scope.UCurrCount4++;
-                   alert("Success!!"); 
+                    case 4:
+                    if($scope.EvenCurrCount4 < $scope.EvenMax){
+                        $scope.EvenCurrCount4++;
+                alertify.success("Success!!");
+                    } else {
+                      alertify.error("error!!");  
+                    }
+                    
                     break;
                     
-                    case $scope.UCurrCount5:
-                    $scope.UCurrCount5++;
-                   alert("Success!!"); 
+                    case 5:
+                      if($scope.EvenCurrCount5 < $scope.EvenMax){
+                        $scope.EvenCurrCount5++;
+                 alertify.success("Success!!");
+                    } else {
+                      alertify.error("error!!");  
+                    }
+                    
                     break;
             }
-        } 
-        else 
-            {
-                alert("error");
+    };
+     $scope.addKikar = function(KikarCurrCountIndex){
+            switch(KikarCurrCountIndex) {
+                case 1:
+                       if($scope.KikarCurrCount1 < $scope.KikarMax){
+                        $scope.KikarCurrCount1++;
+                   alertify.success("Success!!");
+                    } else {
+                      alertify.error("error!!");  
+                    }
+                    
+                    break;
+                    
+                case 2:
+                       if($scope.KikarCurrCount2 < $scope.KikarMax){
+                        $scope.KikarCurrCount2++;
+                  alertify.success("Success!!");
+                    } else {
+                      alertify.error("error!!");  
+                    }
+                    
+                    break;
+                    
+                case 3:
+                        if($scope.KikarCurrCount3 < $scope.KikarMax){
+                        $scope.KikarCurrCount3++;
+                   alertify.success("Success!!");
+                    } else {
+                      alertify.error("error!!");  
+                    }
+                    
+                    break;
+                    
+                    case 4:
+                      if($scope.KikarCurrCount4 < $scope.KikarMax){
+                        $scope.KikarCurrCount4++;
+                  alertify.success("Success!!");
+                    } else {
+                      alertify.error("error!!");  
+                    }
+                    
+                    break;
+                    
+                    case 5:
+                        if($scope.KikarCurrCount5 < $scope.KikarMax){
+                        $scope.KikarCurrCount5++;
+                    alertify.success("Success!!");
+                    } else {
+                      alertify.error("error!!");  
+                    }
+                    
+                    break;
+            }
+    };
+    
+     $scope.addU = function(UCurrCountIndex){
+            switch(UCurrCountIndex) {
+                case 1:
+                     if($scope.UCurrCount1 < $scope.UMax){
+                        $scope.UCurrCount1++;
+                  alertify.success("Success!!");
+                    } else {
+                      alertify.error("error!!");  
+                    }
+                    
+                    break;
+                    
+                case 2:
+                        if($scope.UCurrCount2 < $scope.UMax){
+                        $scope.UCurrCount2++;
+                alertify.success("Success!!");
+                    } else {
+                      alertify.error("error!!");  
+                    }
+                    
+                    break;
+                    
+                case 3:
+                       if($scope.UCurrCount3 < $scope.UMax){
+                        $scope.UCurrCount3++;
+                  alertify.success("Success!!");
+                    } else {
+                      alertify.error("error!!");  
+                    }
+                    
+                    break;
+                    
+                    case 4:
+                        if($scope.UCurrCount4 < $scope.UMax){
+                        $scope.UCurrCount4++;
+                  alertify.success("Success!!");
+                    } else {
+                      alertify.error("error!!");  
+                    }
+                    
+                    break;
+                    
+                    case 5:
+                      if($scope.UCurrCount5 < $scope.UMax){
+                        $scope.UCurrCount5++;
+                  alertify.success("Success!!");
+                    } else {
+                      alertify.error("error!!");  
+                    }
+                    
+                    break;
             }
     };
 });
